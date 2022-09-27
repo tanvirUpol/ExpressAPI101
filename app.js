@@ -12,17 +12,10 @@ const blogRoutes = require("./routes/blogsRoute");
 //routes
 app.use("/blogs", blogRoutes);
 
+//redirecting to blogs get
 app.get("/", (req, res) => {
-  res.send("Home!");
+  res.redirect("/blogs/get");
 });
-
-app.get("/blogs", (req, res) => {
-  res.send("Blog page");
-});
-
-// app.post("/", (req, res) => {
-//   res.send(req.body);
-// });
 
 // connect to db and start server
 
